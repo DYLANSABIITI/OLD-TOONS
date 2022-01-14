@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+<html lang="en">
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        {%block body%}
+            <h1 id="head"><b style="font-size: 35px;">HOME OF TOONS</b></h1>
+            
+            <form autocomplete="off" action="/home" method="POST">
+                <input name='search' id="search" type= "text" placeholder= "search..." style= "text-align: left;" >
+                <button class="btn-search"><image src="{{search}}"></image></button>
+            </form>
+            <div class="container-1">
+                <a href="{{url_for('views.video')}}"><img src="{{ben_10_logo}}"width="200px", height="200px"></a>
+                <a href="#"><img src="{{alien_force_logo}}"width="200px", height="200px"></a>
+                <a href="#"><img src="{{ultimate_alien}}"width="200px", height="200px"></a>
+            </div>
+        {%endblock%}
+</body>
+</html>

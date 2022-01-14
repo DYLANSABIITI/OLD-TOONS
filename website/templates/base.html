@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible3" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="where to describe the website when browsed">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='playlist.css') }}">
+    <title>OLD TOONS</title>
+<head>
+<body>
+    <header>
+        <img class="logo" src="{{cover}}" alt="logo" width="100px" height="100px">
+        <nav class="nav_links">
+            <ul>
+                <li><a href="{{url_for('views.home')}}" id="Aboutus" >Home</a></li>
+                <li><a href="{{url_for('auth.signout')}}" id="Logout">LOG OUT</a></li>
+                <li><a href="{{url_for('auth.login')}}" id="Login">LOG IN</a></li>
+                <li><a href="{{url_for('auth.signin')}}" id="signout">SIGN IN</a></li>
+                <li><a href="#" id="setting">SETTINGS</a></li>
+            </ul>
+        </nav>
+        </nav>
+        <a class="cta" href="#"><button>Contact</button></a>
+    </header>
+
+    {%block body%}
+
+    {%endblock%}
+</body>
+</html>
